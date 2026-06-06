@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RK Nail Academy — лендинг
 
-## Getting Started
+Одностраничный сайт авторской академии маникюра. Next.js 16 + TypeScript + Tailwind CSS v4. Деплой на Vercel.
 
-First, run the development server:
+## Запуск локально
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # производственная сборка
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Где править контент
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Весь текст и данные вынесены в папку `src/data` — править можно без знания React:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Файл | Что внутри |
+|------|-----------|
+| `src/data/site.ts` | Телефон, WhatsApp, адрес, соцсети, ссылка на карту, навигация |
+| `src/data/content.ts` | Hero, «Почему выбирают нас», отзывы, «Обо мне», галерея, reels |
+| `src/data/services.ts` | Услуги и цены (табы Все/Маникюр/Педикюр) |
+| `src/data/courses.ts` | Курсы (название, описание, цена) |
 
-## Learn More
+### Кнопки «Записаться»
+Ведут в WhatsApp на номер из `site.phoneRaw` с предзаполненным сообщением. Логика — в `src/lib/contact.ts`.
 
-To learn more about Next.js, take a look at the following resources:
+### Карта
+В `site.mapEmbedSrc` вставьте `src` из 2ГИС/Яндекс.Карт («Поделиться → встроить»).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Картинки
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Положите файлы в папку `public/` и укажите путь в данных (путь начинается со `/`):
 
-## Deploy on Vercel
+- `public/gallery/` → `content.ts` → `gallery[].src` (например `/gallery/work-1.jpg`)
+- `public/courses/` → `courses[].image`
+- `public/services/` → `services[].image`
+- фото мастера → `about.photo` и hero (в `Hero.tsx`)
+- превью reels → `reels[].poster`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Пока пути пустые — показываются серые плейсхолдеры, как в макете.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Деплой на Vercel
+
+1. Запушить репозиторий на GitHub.
+2. На vercel.com → **Add New → Project** → импортировать репозиторий.
+3. Vercel сам определит Next.js. Нажать **Deploy** — настройки менять не нужно.
+4. (Опционально) Привязать домен в Settings → Domains.
