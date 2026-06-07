@@ -12,13 +12,15 @@ export const hero = {
   ],
 };
 
-// «Как это выглядит» — Instagram reels.
-// Вставьте ссылки на reels и (по желанию) превью-картинки в /public.
+// «Как это выглядит» — рилсы, которые крутятся прямо на сайте (без звука).
+// Положите видеофайлы в public/reels/ с именами reel-1.mp4 … reel-4.mp4
+// poster — необязательная обложка (первый кадр), напр. /reels/reel-1.jpg
+// href — ссылка на этот же рилс в Instagram (открывается по иконке в углу).
 export const reels = [
-  { href: "https://instagram.com/", poster: "" },
-  { href: "https://instagram.com/", poster: "" },
-  { href: "https://instagram.com/", poster: "" },
-  { href: "https://instagram.com/", poster: "" },
+  { src: "/reels/reel-1.mp4", poster: "", href: "https://www.instagram.com/rk_nail_academy/" },
+  { src: "/reels/reel-2.mp4", poster: "", href: "https://www.instagram.com/rk_nail_academy/" },
+  { src: "/reels/reel-3.mp4", poster: "", href: "https://www.instagram.com/rk_nail_academy/" },
+  { src: "/reels/reel-4.mp4", poster: "", href: "https://www.instagram.com/rk_nail_academy/" },
 ];
 
 // «Почему выбирают нас».
