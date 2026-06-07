@@ -17,15 +17,15 @@ export const site = {
   },
 
   socials: {
-    instagram: "https://instagram.com/", // TODO: вставить профиль
+    instagram: "https://www.instagram.com/rk_nail_academy/",
     whatsapp: "https://wa.me/77772842528",
-    telegram: "https://t.me/", // TODO: вставить аккаунт
-    twogis: "https://2gis.kz/", // TODO: ссылка на карточку 2ГИС
+    telegram: "https://t.me/raima2021",
+    twogis: "https://go.2gis.com/CMhZr",
   },
 
-  // iframe-карта 2ГИС / Яндекс. Вставьте src из «Поделиться → встроить».
+  // Карта с меткой академии (Павлодар). Координаты lon,lat из карточки 2ГИС.
   mapEmbedSrc:
-    "https://yandex.ru/map-widget/v1/?ll=76.945465%2C43.238949&z=15",
+    "https://yandex.ru/map-widget/v1/?ll=76.941837%2C52.290669&z=17&pt=76.941837,52.290669,pm2rdm",
 
   copyrightYear: 2026,
 } as const;

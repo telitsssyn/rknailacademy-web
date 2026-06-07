@@ -38,7 +38,7 @@ export function Hero() {
         </div>
 
         <Media
-          src="/hero.jpg"
+          src="/hero.png"
           alt="Райма Курашовна в академии"
           className="aspect-[4/3] w-full"
         />

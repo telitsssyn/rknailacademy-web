@@ -9,7 +9,7 @@ export function About() {
     <Section id="about">
       <div className="grid items-center gap-10 lg:grid-cols-2">
         <Media
-          src={about.photo || "/about.jpg"}
+          src={about.photo || "/about.png"}
           alt="Райма Курашовна"
           className="aspect-[4/3] w-full"
         />
