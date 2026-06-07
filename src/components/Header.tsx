@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import { nav, site } from "@/data/site";
+import { nav } from "@/data/site";
 import { bookTrainingHref } from "@/lib/contact";
 
 export function Header() {
@@ -12,13 +13,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-card-border bg-white/90 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between">
-        <Link href="#top" className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-sm font-bold text-white">
-            RK
-          </span>
-          <span className="text-sm font-semibold tracking-tight">
-            {site.name}
-          </span>
+        <Link href="#top" className="flex items-center" aria-label="RK Nail Academy">
+          <Image
+            src="/logo.svg"
+            alt="RK Nail Academy"
+            width={168}
+            height={40}
+            priority
+            className="h-9 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">

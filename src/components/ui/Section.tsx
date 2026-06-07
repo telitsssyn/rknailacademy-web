@@ -28,7 +28,7 @@ type HeaderProps = {
 export function SectionHeader({ title, action }: HeaderProps) {
   return (
     <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+      <h2 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
         {title}
       </h2>
       {action ? (

@@ -1,16 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #2641d6;
-  --color-brand-dark: #1c33ad;
-  --color-brand-light: #4a63e6;
-  --color-ink: #14151a;
-  --color-muted: #6b7280;
-  --color-section: #f1f1f2;
-  --color-card-border: #e6e6e8;
+  /* Фирменная палитра RK Nail Academy */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #daebff;
+  --color-brand-200: #bddcff;
+  --color-brand-300: #90c7ff;
+  --color-brand-400: #5ca9fe;
+  --color-brand-500: #3685fb;
+  --color-brand-600: #155eef;
+  --color-brand-700: #1850dd;
+  --color-brand-800: #1b41b2;
+  --color-brand-900: #1b3b8d;
+  --color-brand-950: #162555;
+
+  --color-brand: #1b41b2;
+  --color-brand-dark: #1b3b8d;
+  --color-brand-light: #3685fb;
+
+  --color-ink: #171717;
+  --color-muted: #767676;
+  --color-section: #f5f5f5;
+  --color-card-border: #e5e5e5;
 
   --font-sans: var(--font-inter);
-  --font-display: var(--font-playfair);
+  --font-display: var(--font-lora);
 
   --radius-card: 14px;
 }

@@ -8,12 +8,10 @@ export function Hero() {
     <section id="top" className="bg-white pt-10 pb-16 sm:pt-14 sm:pb-20">
       <div className="container-page grid items-center gap-10 lg:grid-cols-2">
         <div>
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+          <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
             {hero.title}
             <br />
-            <span className="font-display italic text-brand">
-              {hero.titleAccent}
-            </span>
+            <span className="italic text-brand">{hero.titleAccent}</span>
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">
@@ -40,7 +38,7 @@ export function Hero() {
         </div>
 
         <Media
-          src={undefined}
+          src="/hero.jpg"
           alt="Райма Курашовна в академии"
           className="aspect-[4/3] w-full"
         />

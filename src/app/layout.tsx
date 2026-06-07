@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
 
@@ -9,8 +9,8 @@ const inter = Inter({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin", "cyrillic"],
   style: ["italic", "normal"],
   display: "swap",
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${inter.variable} ${playfair.variable} h-full`}
+      className={`${inter.variable} ${lora.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-white text-ink">
         {children}

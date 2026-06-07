@@ -4,7 +4,7 @@ import { features } from "@/data/content";
 export function Features() {
   return (
     <Section id="features">
-      <h2 className="mb-10 text-center text-2xl font-semibold tracking-tight sm:text-3xl">
+      <h2 className="mb-10 text-center font-display text-2xl font-semibold tracking-tight sm:text-3xl">
         Почему выбирают нас
       </h2>
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

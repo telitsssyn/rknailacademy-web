@@ -9,7 +9,7 @@ export function Location() {
     <Section id="location" muted>
       <div className="grid items-center gap-10 lg:grid-cols-2">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+          <h2 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
             Где нас найти
           </h2>
 
