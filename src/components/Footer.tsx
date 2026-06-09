@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Send, MessageCircle, MapPin } from "lucide-react";
 import { site } from "@/data/site";
+import type { Locale, Dictionary } from "@/lib/i18n/dictionaries";
 
 function Instagram({ className }: { className?: string }) {
   return (
@@ -21,14 +22,15 @@ function Instagram({ className }: { className?: string }) {
   );
 }
 
-export function Footer() {
+export function Footer({ lang, dict: t }: { lang: Locale; dict: Dictionary }) {
+
   return (
     <footer className="border-t border-card-border bg-white py-8">
-      <div className="container-page flex flex-col items-center justify-between gap-4 sm:flex-row">
+      <div className="container-page flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <p className="text-sm text-muted">
           © {site.copyrightYear} {site.name} ·{" "}
-          <Link href="#" className="hover:text-ink">
-            Условия и конфиденциальность
+          <Link href={`/${lang}/privacy`} className="hover:text-ink">
+            {t.footer.privacy}
           </Link>
         </p>
 
@@ -42,10 +44,24 @@ export function Footer() {
           <Link href={site.socials.whatsapp} target="_blank" aria-label="WhatsApp" className="hover:text-brand">
             <MessageCircle className="h-5 w-5" />
           </Link>
-          <Link href={site.socials.twogis} target="_blank" aria-label="2ГИС" className="hover:text-brand">
+          <Link href={site.socials.twogis} target="_blank" aria-label="2GIS" className="hover:text-brand">
             <MapPin className="h-5 w-5" />
           </Link>
         </div>
+      </div>
+
+      <div className="container-page mt-4 border-t border-card-border pt-4">
+        <p className="text-xs text-muted/60 text-center">
+          {t.footer.madeBy}{" "}
+          <Link
+            href="https://www.instagram.com/telitsyn.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-brand transition-colors"
+          >
+            @telitsyn.dev
+          </Link>
+        </p>
       </div>
     </footer>
   );

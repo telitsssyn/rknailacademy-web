@@ -22,7 +22,7 @@ export function Section({ id, children, className = "", muted }: SectionProps) {
 
 type HeaderProps = {
   title: string;
-  action?: { label: string; href: string };
+  action?: { label: string; href: string; external?: boolean };
 };
 
 export function SectionHeader({ title, action }: HeaderProps) {
@@ -34,6 +34,8 @@ export function SectionHeader({ title, action }: HeaderProps) {
       {action ? (
         <Link
           href={action.href}
+          target={action.external ? "_blank" : undefined}
+          rel={action.external ? "noopener noreferrer" : undefined}
           className="inline-flex h-9 items-center gap-2 rounded-lg border border-card-border bg-white px-4 text-sm font-medium transition-colors hover:border-brand hover:text-brand"
         >
           {action.label}

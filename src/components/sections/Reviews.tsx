@@ -1,17 +1,18 @@
 import { Star } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/Section";
-import { reviews } from "@/data/content";
 import { site } from "@/data/site";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
 
-export function Reviews() {
+export function Reviews({ dict: t }: { dict: Dictionary }) {
+
   return (
     <Section id="reviews" muted>
       <SectionHeader
-        title="Отзывы"
-        action={{ label: "Смотреть все отзывы в 2ГИС", href: site.socials.twogis }}
+        title={t.reviews.heading}
+        action={{ label: t.reviews.action, href: site.socials.twogis, external: true }}
       />
       <div className="grid gap-5 md:grid-cols-3">
-        {reviews.map((r, i) => (
+        {t.reviews.items.map((r, i) => (
           <div
             key={i}
             className="flex flex-col rounded-card border border-card-border bg-white p-5"

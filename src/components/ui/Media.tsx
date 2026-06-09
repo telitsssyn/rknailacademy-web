@@ -20,7 +20,14 @@ export function Media({ src, alt, className = "", rounded = "rounded-card" }: Pr
   }
   return (
     <div className={`relative overflow-hidden ${rounded} ${className}`}>
-      <Image src={src} alt={alt} fill className="object-cover" />
+      <Image 
+        src={src} 
+        alt={alt} 
+        fill 
+        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+        unoptimized
+        className="object-cover" 
+      />
     </div>
   );
 }

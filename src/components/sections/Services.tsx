@@ -4,27 +4,25 @@ import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Media } from "@/components/ui/Media";
-import {
-  services,
-  serviceCategories,
-  type ServiceCategory,
-} from "@/data/services";
-import { bookServiceForHref } from "@/lib/contact";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
+import { whatsappLink } from "@/lib/contact";
 
-export function Services() {
-  const [active, setActive] = useState<ServiceCategory | "all">("all");
+type CategoryId = "all" | "manicure" | "pedicure";
+
+export function Services({ dict: t }: { dict: Dictionary }) {
+  const [active, setActive] = useState<CategoryId>("all");
 
   const visible =
     active === "all"
-      ? services
-      : services.filter((s) => s.category === active);
+      ? t.services.items
+      : t.services.items.filter((s) => s.category === active);
 
   return (
     <Section id="services">
-      <SectionHeader title="Запишитесь к мастеру" action={{ label: "Весь прайс", href: "#services" }} />
+      <SectionHeader title={t.services.heading} />
 
       <div className="mb-6 inline-flex gap-2 rounded-xl bg-section p-1">
-        {serviceCategories.map((cat) => (
+        {t.services.categories.map((cat) => (
           <button
             key={cat.id}
             type="button"
@@ -54,16 +52,16 @@ export function Services() {
             />
             <div className="flex flex-1 flex-col p-3">
               <h3 className="text-sm font-medium leading-snug">{service.name}</h3>
-              <span className="mt-1 text-sm font-semibold text-brand">
+              <span className="mt-1 mb-3 text-sm font-semibold text-brand">
                 {service.price}
               </span>
               <a
-                href={bookServiceForHref(service.name)}
+                href={whatsappLink(t.whatsapp.bookServiceFor.replace("{name}", service.name))}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-flex h-9 items-center justify-center gap-1.5 rounded-lg bg-brand px-3 text-sm font-medium text-white transition-colors hover:bg-brand-dark"
+                className="mt-auto inline-flex h-9 items-center justify-center gap-1.5 rounded-lg bg-brand px-3 text-sm font-medium text-white transition-colors hover:bg-brand-dark"
               >
-                Записаться
+                {t.services.bookBtn}
                 <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>

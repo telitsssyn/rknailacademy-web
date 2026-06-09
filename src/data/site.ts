@@ -3,6 +3,7 @@
 
 export const site = {
   name: "RK Nail Academy",
+  url: "https://rknail.kz",
   brandTop: "Авторская академия",
   brandAccent: "Раймы Курашовны",
 
@@ -31,9 +32,9 @@ export const site = {
 } as const;
 
 export const nav = [
-  { label: "Обучение", href: "#courses" },
-  { label: "Услуги", href: "#services" },
-  { label: "Портфолио", href: "#gallery" },
-  { label: "Обо мне", href: "#about" },
-  { label: "Контакты", href: "#location" },
+  { label: "Портфолио", href: "/#gallery" },
+  { label: "Обучение", href: "/#courses" },
+  { label: "Услуги", href: "/#services" },
+  { label: "Обо мне", href: "/#about" },
+  { label: "Контакты", href: "/#location" },
 ] as const;

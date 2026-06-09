@@ -1,14 +1,15 @@
 import { Section } from "@/components/ui/Section";
-import { features } from "@/data/content";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
 
-export function Features() {
+export function Features({ dict: t }: { dict: Dictionary }) {
+
   return (
     <Section id="features">
       <h2 className="mb-10 text-center font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-        Почему выбирают нас
+        {t.features.heading}
       </h2>
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {features.map((f) => (
+        {t.features.items.map((f) => (
           <div
             key={f.num}
             className="rounded-card border border-card-border bg-white p-6"
