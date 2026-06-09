@@ -286,7 +286,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     site: {
       brandTop: "Авторская академия",
       brandAccent: "Раймы Курашовны",
-      addressLine1: "Улица Лермонтова, дом 4, 2 этаж",
+      addressLine1: "Улица Лермонтова, дом 46, 2 этаж",
       addressLine2: "Остановка «Гульдер», пересечение Лермонтова · Сатпаева",
     },
   },
@@ -510,7 +510,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     site: {
       brandTop: "Academy by",
       brandAccent: "Raima Kurashovna",
-      addressLine1: "4 Lermontov Street, 2nd floor",
+      addressLine1: "46 Lermontov Street, 2nd floor",
       addressLine2: "Gulder bus stop, intersection of Lermontov & Satpayev St.",
     },
   },
@@ -734,7 +734,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     site: {
       brandTop: "Авторлық академия",
       brandAccent: "Райма Құрашқызы",
-      addressLine1: "Лермонтов көшесі, 4-үй, 2-қабат",
+      addressLine1: "Лермонтов көшесі, 46-үй, 2-қабат",
       addressLine2: "«Гүлдер» аялдамасы, Лермонтов · Сәтбаев қиылысы",
     },
   },
