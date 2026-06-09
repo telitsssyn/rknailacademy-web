@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Media } from "@/components/ui/Media";
 import type { Dictionary } from "@/lib/i18n/dictionaries";
@@ -62,7 +62,6 @@ export function Services({ dict: t }: { dict: Dictionary }) {
                 className="mt-auto inline-flex h-9 items-center justify-center gap-1.5 rounded-lg bg-brand px-3 text-sm font-medium text-white transition-colors hover:bg-brand-dark"
               >
                 {t.services.bookBtn}
-                <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
           </div>
