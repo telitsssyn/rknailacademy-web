@@ -25,7 +25,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
       <main className="flex-1 bg-[#FAFAFA] py-16 sm:py-24">
         <div className="container-page max-w-3xl">
           <div className="rounded-2xl border border-card-border bg-white p-8 sm:p-12 shadow-sm prose prose-neutral max-w-none">
-            <h1 className="mb-8 text-3xl font-bold font-lora text-ink">{dict.privacy.heading}</h1>
+            <h1 className="mb-8 text-2xl sm:text-3xl font-bold font-lora text-ink break-words hyphens-auto">{dict.privacy.heading}</h1>
 
             {dict.privacy.sections.map((section, i) => (
               <section key={i} className="mb-10">
